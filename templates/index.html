@@ -1,0 +1,30 @@
+{% include "header.html" %}
+{% block content %}
+
+
+    <div class="container-title" style="background-image: url({{ url_for('static', filename='images/index-image.jpg') }})">
+        <h1 class='title'>Pick Your Destination</h1>
+    </div>
+
+    <div class="container-blog">
+
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <a class="index-countries" href="{{url_for('show_egypt')}}">🇪🇬</a>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <a class="index-countries" href="{{url_for('show_india')}}">🇮🇳</a>
+            </div>
+
+            <div class="col-lg-4 text-center">
+                <a class="index-countries" href="{{url_for('show_mexico')}}">🇲🇽</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
+{% include "footer.html" %}
