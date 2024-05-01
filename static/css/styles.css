@@ -1,95 +1,169 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* Containers */
+html {
+  font-size: 62.5%;
+}
 
-.container-title{
+body {
+  font-family: "Montserrat" sans-serif;
+}
+
+.container-intro {
   background-size: cover;
+  background-position: top;
   background-repeat: no-repeat;
-  color: white;
-  height: 600px;
-  padding: 350px 200px;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  font-size: 3.5rem;
+  padding: 2rem 3rem;
+}
+
+.navbar-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.nav-title:link,
+.nav-title:visited,
+.nav-link:link,
+.nav-link:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  font-size: 3rem;
+}
+
+.container-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  letter-spacing: 0.5rem;
   text-align: center;
 }
 
-.container-blog {
-  margin: 100px 210px;
-}
-
-
-/* Home Page Emojis */
-
-.index-countries {
-    font-size: 100px;
-}
-
-/* Blog Posts - Header */
-
 .title {
-  font-family: 'Sacramento', cursive;
-  font-size: 70px;
-  margin: 20px;
+  font-family: "Sacramento", cursive;
+  font-size: 10rem;
 }
 
 .subtitle {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 25px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
   font-weight: 600;
 }
 
-/* Blog Posts - Body */
+.container-flags {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  gap: 8rem;
+  padding: 4rem 0;
+}
 
-.body-text {
-    font-family: "Montserrat";
-    font-size: 20px;
-    line-height: 1.5;
+.flag {
+  max-width: 15vw;
+  border-radius: 0.5rem;
+  transition: all 0.3s;
+}
+
+.flag:hover {
+  transform: translate(0, -2rem);
+}
+
+.container-post-main {
+  padding: 6rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+  text-align: justify;
+}
+
+.container-post-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
 }
 
 .post-title {
-    font-size: 50px;
-    font-weight: 900;
-    margin-bottom: 15px;
+  font-size: 5rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+  text-align: center;
 }
 
-.post-images {
-  height: 800px;
-  width: 100%;
-  margin-top: 5px;
+.post-image {
+  width: 80vw;
+  border-radius: 0.5rem;
+  max-height: 80vh;
 }
 
-.text-blog-post {
-    font-size: 25px;
-    margin: 30px 0 80px;
-    text-align: justify;
-    text-align-last: left;
+.post-intro,
+.post-content {
+  font-size: 2.5rem;
+  width: 80vw;
+  line-height: 1.5;
 }
 
-
-/* Fine tuning some images */
-
-#ganesha-image {
-    height: 1100px;
+.about-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 4rem 6rem;
+  text-align: justify;
+  font-size: 3rem;
 }
 
-#mexico-food-image {
-    height: 1000px;
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 0;
+  background-color: rgba(58, 84, 37, 1);
 }
 
-
-/* Footer */
-
-footer {
-    padding: 30px;
+.footer-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  list-style: none;
 }
 
-.social-media-icons {
-    color: black;
-    font-size: 20px;
-    margin: 20px 10px;
-    text-align: center;
-}
-
+.social-media-icons,
 .copyright {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 15px;
+  color: #000;
+  font-size: 2rem;
+  transition: all 0.5s;
 }
 
+.social-media-icons:hover,
+.copyright:hover {
+  color: #e67e22;
+}

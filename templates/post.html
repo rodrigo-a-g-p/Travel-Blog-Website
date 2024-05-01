@@ -1,0 +1,26 @@
+{% extends "base.html" %} 
+
+{% block page_title %}
+<div class="container-title">
+  <h1 class="title">{{data["title"]}}</h1>
+  <p class="subtitle">{{data["subtitle"]}}</p>
+</div>
+{% endblock page_title %}
+
+{% block content %}
+<main class="container-post-main">
+  <p class="post-intro">{{data["intro"]}}</p>
+
+  {% for post in data["posts"] %}
+  <div class="container-post-sub">
+    <p class="post-title">{{post["title"]}}</p>
+    <img
+      class="post-image"
+      src="static/images/{{post['image']}}"
+      alt="{{post['title']}}"
+    />
+    <p class="post-content">{{post["content"]}}</p>
+  </div>
+  {% endfor %}
+</main>
+{% endblock %}

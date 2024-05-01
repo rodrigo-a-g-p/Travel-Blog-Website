@@ -1,43 +1,48 @@
-{% include "header.html" %}
+{% extends "base.html" %} 
+
+{% block page_title %}
+<div class="container-title">
+  <h1 class="title">About</h1>
+  <p class="subtitle">A short introduction</p>
+</div>
+{% endblock page_title %} 
+
 {% block content %}
+<div class="about-container">
+  <p>
+    Hey there! My name is Rodrigo and I wrote this little blog as a proposed
+    project from a programming course I took. I wrote about these three
+    countries because, in my opinion, these are the most culturally rich
+    countries in the world. Personally, I have visited both Egypt and Mexico,
+    but never visited India.
+  </p>
 
-  <header class="masthead container-title" style="background-image: url({{ url_for('static', filename='images/about-image.jpg')}})">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <h1 class='title'>About</h1>
-            <span class="subtitle">A short introduction</span>
-        </div>
-      </div>
-    </div>
-  </header>
+  <p>
+    In fact, I am planning on doing so this year (2023) as well as to visit
+    Pakistan. My plan is to visit Delhi, Agra, Jaipur (in the tourist lexicon,
+    these three cities make up the famous "Golden Triangle"), Amritsar, then I
+    want to attend the India/Pakistan border-ceremony (on the Indian side),
+    cross the border into Pakistan, visit Lahore, go back to the border to
+    attend the ceremony on the Pakistani side, and then visit Mohenjo-Daro
+    (probably the oldest city ever), and finally, visit Karachi. Let's see how
+    it goes!
+  </p>
 
-    <div class="row container-blog body-text">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <p>
-                Hey there! My name is Rodrigo and I wrote this little blog as a proposed project from a programming course I took.
-                I wrote about these three countries because, in my opinion, these are the most culturally rich countries in the world.
-                Personally, I have visited both Egypt and Mexico, but never visited India.
-            </p>
+  <p>
+    I was planning on adding China to the blog, but I feel like China is
+    extremely overwhelming, and I would not know how to introduce it properly.
+    Maybe when I am better versed in the history and culture of China, I'll add
+    it to the blog.
+  </p>
 
-            <p>
-                In fact, I am planning on doing so this year (2023) as well as to visit Pakistan. My plan is to visit Delhi, Agra, Jaipur (in the tourist
-                lexicon, these three cities make up the famous "Golden Triangle"), Amritsar, then I want to attend the India/Pakistan border-ceremony
-                (on the Indian side), cross the border into Pakistan, visit Lahore, go back to the border to attend the ceremony on the Pakistani side,
-                and then visit Mohenjo-Daro (probably the oldest city ever), and finally, visit Karachi. Let's see how it goes!
-            </p>
+  <p>
+    UPDATE May 1st, 2024:
+  </p>
 
-            <p>
-                I was planning on adding China to the blog, but I feel like China is extremely overwhelming, and
-                I would not know how to introduce it properly. Maybe when I am better versed in the history and culture of China, I'll add it to the blog.
-            </p>
+  <p>
+   It has been over a year since I first pushed this project into a repo in late january 2023. Since then, from late march to late april 2023, I travelled to India, and Pakistan (and also Istanbul, Turkey), and it was an amazing trip. I did everything I wrote above, except for re-watching the border ceremony, this time on the Pakistani side, as I thought it would be the same thing again (after having watched from the Indian side). Next time, I'll attend the ceremony from the Pakistani side. I have not travelled in over a year because I am doing an orthodontic treatment, which started in late August 2023. Meanwhile, the next trips I have planned are the following: China, Iran, Southeast Asia (Vietnam, a bit of Laos, Cambodia, and a stop in Mumbai), Latin America (Colombia, Peru, and Guatemala), and Pakistan-Afghanistan. I'll keep you updated. 
+  </p>
 
-            <p>
-                Cheers!
-            </p>
-        </div>
-    </div>
-
+  <p>Cheers!</p>
+</div>
 {% endblock %}
-{% include "footer.html" %}
